@@ -29,8 +29,9 @@ class PermissionSeeder extends Seeder
         $adminRole = Role::create(['name' => 'Admin']);
         $adminRole->givePermissionTo($permissions);
         $admin = User::factory()->create([
-            'name' => 'Jerry',
-            'email' => 'admin@admin.com',
+            'name' => 'shibu',
+            'email' => 'polodev10@gmail.com',
+            'password' => bcrypt('secret2'),
         ]);
         $admin->assignRole($adminRole);
 
